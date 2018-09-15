@@ -39,6 +39,11 @@ article.main {
 	margin: 20px;
 }
 
+article.main h1 {
+	font-family: 'Cormorant Unicase', serif;
+	font-weight: normal;
+}	
+
 article.main .help-buttons {
 	text-align: left;
 }
