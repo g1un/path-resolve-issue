@@ -1,0 +1,36 @@
+.logo {
+	font-family: 'Montserrat', sans-serif;
+	color: #FF6600;
+	font-size: 40px;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.sub-logo {
+	font-size: 20px;
+}
+
+a {
+	color: #FF6600;
+}
+
+header h1 {
+	font-family: 'Cormorant Unicase', serif;
+	font-size: 100px;
+	font-weight: normal;
+	text-align: center;
+	margin: 0px;
+}
+
+
+article.main {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Roboto', serif;
+	margin: 20px;
+}
+
+article.main .help-buttons {
+	text-align: left;
+}
