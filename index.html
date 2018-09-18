@@ -11,7 +11,12 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-  <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase|Montserrat|Playfair+Display|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase|Montserrat|Playfair+Display|Roboto|Open+Sans" rel="stylesheet">
+  <!-- 1. Link to jQuery (1.8 or later), -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+  <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/site.css">
@@ -32,23 +37,27 @@
     </p>
   </header>
   <article class="main">    
-    <h2>О нас</h2>
-    <img class="teaser-image" src="/img/about-1.png" alt="">
+    <h2>О нас</h2>    
     <p>
       Я, Попова Любовь Леонидовна, библиотекарь в Средней Школе <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%A7%D0%B5%D0%BB%D1%8F%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)">села "Богдановское"</a> Челябинской области. 
     </p>  
+    <p><img class="teaser-image" src="/img/about-1.png" alt=""></p>
     <p>
       В нашем селе проживает около 1 000 человек и располагается оно вдали от крупных городов. В центре села находится школа, в которой учатся дети из Богдановки и других ближайших поселений - Грязнушинское, Каменка, Первомайское, Красногвардейское.
     </p>
     <p>
-      <img width = "40%" src="img/biblio2.jpg" alt="">
+      <div class="fotorama">
+        <img width = "40%" src="img/biblio2.jpg" alt="">
+        <img width = "40%" src="img/biblio1.jpg" alt="">
+        <img width = "40%" src="img/biblio3.jpg" alt="">
+        <img width = "40%" src="img/biblio4.jpg" alt="">
+        <img width = "40%" src="img/biblio5.jpg" alt="">
+      </div>  
     </p>
     <p>
       В отдаленных селах Российской Федерации единственным оплотом культурной детской жизни выступает школа. Только в школе сельские дети помимо образовательной деятельности проводят культурный досуг, посещают кружки дополнительного образования, читают книги.
     </p>
-    <p>
-      <img width = "40%" src="img/biblio3.jpg" alt="">
-    </p>
+    
 
     <p>
       Наша библиотека располагается на территории школы и помимо обеспечения учебной деятельности учебниками она всегда выполняла просветительскую деятельность, занималась воспитанием и развитием любви к чтению у всех наших учеников и жителей села.
@@ -60,9 +69,7 @@
     <p>
       Сейчас детская книга для села жизненно необходима и мы очень нуждаемся в вашей помощи.
     </p>
-    <p>
-      <img width = "40%" src="img/biblio1.jpg" alt="">
-    </p>
+    
     <h2 id="helphelphelp">Как нам помочь книгой</h2>
     <img class="teaser-image" src="/img/about-3.png" alt="">
     <p>

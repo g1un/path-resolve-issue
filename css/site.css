@@ -40,7 +40,7 @@ header h1 {
 article.main {
 	text-align: center;
 	font-size: 25px;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Open Sans', sans-serif;
 	margin: 20px;
 }
 
@@ -49,7 +49,7 @@ article.main .help-buttons {
 }
 
 #logo {	
-	width: 500px;
+	width: 800px;
 	display: block;
 	overflow: hidden;
 	margin: 0 auto;
@@ -61,4 +61,8 @@ article.main .help-buttons {
 
 .teaser-image {
 	width: 50%;	
+}
+
+.fotorama {
+	margin: 0 auto;
 }
