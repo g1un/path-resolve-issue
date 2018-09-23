@@ -1,0 +1,36 @@
+.btn-1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 262/16+rem;
+    height: 63/16+rem;
+    border-radius: 63/2/16+rem;
+    border: none;
+    outline: none;
+    padding: 0 .5rem;
+    background: $supernova;
+    cursor: pointer;
+    @include msc-700();
+    font-size: 1rem;
+    line-height: 1.15;
+    text-transform: uppercase;
+
+    @include under-sm() {
+        min-width: 211/16+rem;
+        height: 55/16+rem;
+        font-size: 14/16+rem;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: calc(100% - (1/16*1rem));
+        right: 54/16+rem;
+        @include spriteX($present, $present-2x);
+    }
+}

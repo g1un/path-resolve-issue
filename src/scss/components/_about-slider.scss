@@ -1,0 +1,124 @@
+.about-slider {
+    position: relative;
+    align-self: center;
+    margin: 0 0 170/16+rem;
+    width: 100%;
+    max-width: 920/16+rem;
+    padding: 0 70/16+rem;
+    line-height: 0;
+
+    @include under-sm() {
+        margin-bottom: 124/16+rem;
+        padding: 0;
+    }
+
+    &__item {
+        width: 100%;
+
+        &-wrapper {
+            padding-bottom: 50%;
+            background-size: cover;
+        }
+    }
+
+    .slick-list {
+        border-radius: 19/16+rem;
+        box-shadow: 0 0 41/16+rem 0 rgba(#C9C9C9, .5);
+
+        @include under-sm() {
+            border-radius: 5/16+rem;
+        }
+    }
+
+    .slick-slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 38/16+rem;
+        height: 38/16+rem;
+        border-radius: 38/2/16+rem;
+        border: 2/16+rem solid $limeade;
+        cursor: pointer;
+        font-size: 0;
+        line-height: 0;
+
+        @include under-sm() {
+            top: auto;
+            bottom: -70/16+rem;
+            transform: none;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 10/16+rem;
+            height: 10/16+rem;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        &._prev {
+            left: 0;
+
+            &:before {
+                left: 14/16+rem;
+                border-left: 2/16+rem solid $limeade;
+                border-bottom: 2/16+rem solid $limeade;
+            }
+        }
+
+        &._next {
+            right: 0;
+
+            &:before {
+                right: 9/16+rem;
+                margin-right: 5/16+rem;
+                border-top: 2/16+rem solid $limeade;
+                border-right: 2/16+rem solid $limeade;
+            }
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: -50/16+rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+
+        li {
+
+            &:not(:last-child) {
+                margin-right: 21/16+rem;
+            }
+
+            &.slick-active {
+
+                button {
+                    background: $alto;
+                }
+            }
+        }
+
+        button {
+            width: 10/16+rem;
+            height: 10/16+rem;
+            padding: 0;
+            border-radius: 50%;
+            border: 1/16+rem solid $dusty-gray;
+            background: transparent;
+            cursor: pointer;
+            font-size: 0;
+            line-height: 0;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
