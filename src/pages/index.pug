@@ -61,7 +61,7 @@
                         'А+А'
                     ]
                 each item, i in booksList
-                    a(href='#', target='_blank').books__item
+                    a(href='https://www.ozon.ru/?context=search&text=' + item, target='_blank').books__item
                         .books__image
                             +imgSrcset(`img/books-${i+1}`,'png')
                         h4.books__title-2= item
