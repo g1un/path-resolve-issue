@@ -12,5 +12,4 @@ resource-prepare:
   script:
   - ssh -t uralbiblio@uralbiblio.ru "
     cd ~/books.uralbiblio.ru/ && npm install;
-    npm run start;
     npm run build;"
