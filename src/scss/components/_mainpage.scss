@@ -37,6 +37,12 @@
         max-width: 640/16+rem;
         margin-bottom: 105/16+rem;
         text-align: center;
+
+        a {
+            @include msc-700();
+            color: $limeade;
+            text-decoration: none;
+        }
     }
 
     &__btn {
