@@ -6,3 +6,11 @@ deploy:
     - chmod 600 ~/.ssh/id_dsa
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
     - rsync -rav --delete ../books/ uralbiblio@uralbiblio.ru:~/books.uralbiblio.ru/
+
+resource-prepare:
+  stage: deploy
+  script:
+  - ssh -t uralbiblio@uralbiblio.ru "
+    cd ~/books.uralbiblio.ru/ && npm install;
+    npm run start;
+    npm run build;"
