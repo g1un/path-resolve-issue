@@ -1,0 +1,81 @@
++doctype()
+    main.mainpage
+        .container.mainpage__top
+            .logo.mainpage__logo
+                +imgSrcset('img/logo', 'png')
+            p.text-1.mainpage__text-1
+                | Я, Попова Любовь Леонидовна,  библиотекарь в Средней Школе села "Богдановское" Челябинской области.
+            button.btn-1.mainpage__btn подарить книгу
+        .container.mainpage__about.about
+            h2.title-2.mainpage__title-2 О нас
+            .about__row
+                p.about__text-2
+                    +imgSrcset('img/about-1', 'png')
+                p.text-2.about__text-2
+                    |В нашем селе проживает около 1 000 человек и располагается оно вдали от крупных городов. В центре села находится школа, в которой учатся дети из Богдановки и других ближайших поселений — Грязнушинское, Каменка, Первомайское, Красногвардейское.
+            .about-slider.about__slider.js-about-slider-container
+                .slick-slider-arrows.js-about-slider-arrows
+                .about-slider__slider.js-about-slider
+                    -var i = 0
+                    while i < 3
+                        -i++
+                        .about-slider__item
+                            .about-slider__item-wrapper(style=`background-image: url("http://placebeard.it/6${i}0")`)
+                .about-slider__dots.slick-slider-dots.js-about-slider-dots
+            .about__row._mb-0
+                p.text-2.about__text-2
+                    |В отдаленных селах Российской Федерации единственным оплотом культурной детской жизни выступает школа. Только в школе сельские дети помимо образовательной деятельности проводят культурный досуг, посещают кружки дополнительного образования, читают книги.
+                p.text-2.about__text-2
+                    |Наша библиотека располагается на территории школы и помимо обеспечения учебной деятельности учебниками она всегда выполняла просветительскую деятельность, занималась воспитанием и развитием любви к чтению у всех наших учеников и жителей села.
+            .about__image
+                +imgSrcset('img/about-2', 'png')
+            .about__row._d-b
+                p.text-3.about__text-3
+                    | Последние 10 лет школьные библиотеки обеспечиваются из бюджета РФ только учебниками и рабочими тетрадями и единственный способ появления книг в библиотеке это пожертвования.
+                p.text-4.about__text-4
+                    | Сейчас детская книга для села жизненно необходима и мы очень нуждаемся в вашей помощи.
+        .container.mainpage__help.help
+            h2.title-2.help__title Как нам помочь книгой?
+            ul.help__list
+                -
+                    var helpList = [
+                        'Заказать детские книги в одном из интернет-магазинов на адрес библиотеки — 457613 Челябинская обл. Кизильский район село Богдановское ул. Мира 5, Попова Любовь Леонидовна',
+                        'Если у вас есть ненужные детские книги, то вы можете отправить их нам почтой по адресу — 457613 Челябинская обл. Кизильский район село Богдановское ул. Мира 5, Богдановская Средняя Школа',
+                        'Подписать нашу библиотеку на журнал в рамках проекта <a href="#">"БиблиоРодина"</a>',
+                        'Подарить книги на сайте проекта <a href="#">"Подари ребенку книгу"</a>'
+                    ]
+                each item, i in helpList
+                    li.help__list-item
+                        .help__list-num= i + 1
+                        p.text-2.help__list-text !{item}
+        .container.mainpage__books.books
+            h2.title-2.books__title Какие книги нам можно подарить?
+            p.text-2.books__text-1
+                |Нашей библиотеке и ее читатьелям особо не хватает детских книг для младьшего школьного возраста.  Хорошие детские книги издают следующией издательсва:
+            ul.books__list
+                -
+                    var booksList = [
+                        'Самокат',
+                        'МИФ',
+                        'Розовый жираф',
+                        'А+А'
+                    ]
+                each item, i in booksList
+                    li.books__item
+                        .books__image
+                            +imgSrcset(`img/books-${i+1}`,'png')
+                        h4.books__title-2= item
+        .container.mainpage__contacts.contacts
+            h2.title-2.contacts__title Контакты
+            .contacts__row
+                .contacts__item._image
+                    +imgSrcset('img/contacts', 'png')
+                .contacts__item
+                    span Почтовый адрес:
+                    p.text-2 457613 Челябинская обл. Кизильский район село Богдановское. ул. Мира 5, Богдановская Средняя Школа
+                .contacts__item
+                    p.text-2
+                        |#[span Email:] #[a(href="mailto:popova.lubov.l@gmail.com") popova.lubov.l@gmail.com]
+                    p.text-2
+                        |#[span Телефон:] #[a(href="tel:+7 (911) 080-36-14") +7 (911) 080-36-14]
+

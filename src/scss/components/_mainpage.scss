@@ -1,0 +1,50 @@
+.mainpage {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 40/16+rem;
+    border-bottom: 9/16+rem solid $limeade;
+    overflow: hidden;
+
+    @include under-sm() {
+        border-bottom: none;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 10rem;
+        padding-top: 122/16+rem;
+
+        @include under-sm() {
+            margin-bottom: 105/16+rem;
+            padding-top: 54/16+rem;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 90/16+rem;
+
+        @include under-sm() {
+            margin-bottom: 50/16+rem;
+        }
+    }
+
+    &__text-1 {
+        align-self: center;
+        width: 100%;
+        max-width: 640/16+rem;
+        margin-bottom: 105/16+rem;
+        text-align: center;
+    }
+
+    &__btn {
+        align-self: center;
+    }
+
+    &__title-2 {
+        align-self: center;
+        margin-bottom: 38/16+rem;
+    }
+}

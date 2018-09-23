@@ -1,0 +1,23 @@
+//EXTERNAL
+@import "~slick-carousel/slick/slick";
+@import "components/sprite";
+//
+////BASE
+@import "components/variables";
+@import "components/fonts";
+@import "components/mixins";
+@import "components/typography";
+//
+////GENERAL
+@import "components/general";
+@import "components/container";
+@import "components/btn";
+@import "components/logo";
+@import "components/about-slider";
+//
+////CUSTOM
+@import "components/mainpage";
+@import "components/about";
+@import "components/help";
+@import "components/books";
+@import "components/contacts";

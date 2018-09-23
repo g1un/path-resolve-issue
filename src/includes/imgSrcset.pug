@@ -1,0 +1,2 @@
+mixin imgSrcset(src, ext)
+    img(src=`${src + '.' + ext}`, srcset=`${src}@2x.${ext} 2x, ${src}@3x.${ext} 3x`, class=attributes.class)

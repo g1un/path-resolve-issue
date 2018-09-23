@@ -1,0 +1,144 @@
+//sprite backgrounds
+@mixin spriteX($name1, $name2: false, $name3: false) {
+
+    @include sprite($name1);
+
+    @if $name2 {
+
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (   min--moz-device-pixel-ratio: 2),
+        only screen and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (        min-device-pixel-ratio: 2),
+        only screen and (                min-resolution: 192dpi),
+        only screen and (                min-resolution: 2dppx) {
+            @include sprite($name2);
+
+            background-size: nth($spritesheet-2, 1) / nth($name2, 5) * 100%;
+            background-position:
+                nth($name2, 3) / (nth($name2, 5) / nth($name1, 5))
+                nth($name2, 4) / (nth($name2, 5) / nth($name1, 5));
+        }
+    }
+
+    @if $name3 {
+
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 3),
+        only screen and (   min--moz-device-pixel-ratio: 3),
+        only screen and (     -o-min-device-pixel-ratio: 3/1),
+        only screen and (        min-device-pixel-ratio: 3),
+        only screen and (                min-resolution: 288dpi),
+        only screen and (                min-resolution: 3dppx) {
+            @include sprite($name3);
+
+            background-size: nth($spritesheet-3, 1) / nth($name3, 5) * 100%;
+            background-position:
+                nth($name3, 3) / (nth($name3, 5) / nth($name1, 5))
+                nth($name3, 4) / (nth($name3, 5) / nth($name1, 5));
+        }
+    }
+
+    width: nth($name1, 5) !important;
+    height: nth($name1, 6) !important;
+}
+
+//background mixin
+@mixin backgroundImage($name1, $name2: false, $name3: false) {
+
+    background-image: url($name1);
+
+    @if $name2 {
+
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (   min--moz-device-pixel-ratio: 2),
+        only screen and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (        min-device-pixel-ratio: 2),
+        only screen and (                min-resolution: 192dpi),
+        only screen and (                min-resolution: 2dppx) {
+
+            background-image: url($name2);
+        }
+    }
+
+    @if $name3 {
+
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 3),
+        only screen and (   min--moz-device-pixel-ratio: 3),
+        only screen and (     -o-min-device-pixel-ratio: 3/1),
+        only screen and (        min-device-pixel-ratio: 3),
+        only screen and (                min-resolution: 288dpi),
+        only screen and (                min-resolution: 3dppx) {
+
+            background-image: url($name3);
+        }
+    }
+}
+
+//fonts
+@mixin msc-300 {
+    font-family: 'Museo Sans Cyrl 300', sans-serif;
+}
+
+@mixin msc-500 {
+    font-family: 'Museo Sans Cyrl 500', sans-serif;
+}
+
+@mixin msc-700 {
+    font-family: 'Museo Sans Cyrl 700', sans-serif;
+}
+
+@mixin msc-900 {
+    font-family: 'Museo Sans Cyrl 900', sans-serif;
+}
+
+//media
+//lg
+@mixin under-xlg() {
+    @media (max-width: ($xlg - 1)+px) {
+        @content
+    }
+}
+@mixin under-lg() {
+    @media (max-width: ($lg - 1)+px) {
+        @content
+    }
+}
+@mixin over-lg() {
+    @media (max-width: $lg+px) {
+        @content
+    }
+}
+
+//md
+@mixin under-md() {
+    @media (max-width: ($md - 1)+px) {
+        @content
+    }
+}
+@mixin over-md() {
+    @media (min-width: $md+px) {
+        @content
+    }
+}
+
+//sm
+@mixin under-sm() {
+    @media (max-width: ($sm - 1)+px) {
+        @content
+    }
+}
+
+//xs
+@mixin under-xs() {
+    @media (max-width: $xs+px) {
+        @content
+    }
+}
+@mixin over-xs() {
+    @media (min-width: ($xs + 1)+px) {
+        @content
+    }
+}

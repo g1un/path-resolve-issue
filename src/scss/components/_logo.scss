@@ -1,0 +1,13 @@
+.logo {
+    align-self: center;
+    width: 270/16+rem;
+    line-height: 0;
+
+    @include under-sm() {
+        width: 170/16+rem;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,108 @@
+.help {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 100/16+rem;
+
+    &__title {
+        align-self: center;
+        margin-bottom: 100/16+rem;
+        text-align: center;
+
+        @include under-sm() {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__list {
+        position: relative;
+        align-self: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 820/16+rem;
+
+        @include under-sm() {
+            display: block;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            @include spriteX($about-4, $about-4-2x);
+
+            @include under-sm() {
+                display: none;
+            }
+        }
+
+        &:before {
+            margin-left: -1440/2/16+rem;
+        }
+
+        &:after {
+            margin-left: 1440/2/16+rem;
+        }
+
+        &-item {
+            flex: 0 0 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin-bottom: 90/16+rem;
+            min-width: 50%;
+
+            @include under-sm() {
+                margin-bottom: 0;
+
+                &:not(:last-child) {
+                    margin-bottom: 50/16+rem;
+                }
+            }
+
+            &:nth-child(2n) {
+                padding-left: 30/16+rem;
+
+                @include under-sm() {
+                    padding-left: 0;
+                }
+            }
+
+            &:nth-child(2n+1) {
+                padding-right: 30/16+rem;
+
+                @include under-sm() {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        &-num {
+            align-self: center;
+            margin-bottom: 43/16+rem;
+            @include msc-900();
+            font-size: 2rem;
+            line-height: 1.15;
+            color: $hippie-blue;
+            text-align: center;
+
+            @include under-sm() {
+                margin-bottom: 30/16+rem;
+            }
+        }
+
+        &-text {
+            text-align: center;
+
+            a {
+                @include msc-700();
+                color: $limeade;
+                text-decoration: none;
+            }
+        }
+    }
+}

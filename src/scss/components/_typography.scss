@@ -1,0 +1,48 @@
+//title
+.title-2 {
+    @include msc-900();
+    font-size: 36/16+rem;
+    line-height: 1.15;
+
+    @include under-sm() {
+        font-size: 27/16+rem;
+        line-height: 34/27+em;
+    }
+}
+
+//text
+.text-1 {
+    font-size: 35/16+rem;
+    line-height: 43/35+em;
+
+    @include under-sm() {
+        font-size: 20/16+rem;
+        line-height: 25/20+em;
+    }
+}
+
+.text-2 {
+    font-size: 1rem;
+    line-height: 24/16+em;
+}
+
+.text-3 {
+    font-size: 40/16+rem;
+    line-height: 48/40+em;
+    color: $hippie-blue;
+
+    @include under-sm() {
+        font-size: 22/16+rem;
+        line-height: 29/22+em;
+    }
+}
+
+.text-4 {
+    font-size: 24/16+rem;
+    line-height: 34/24+em;
+
+    @include under-sm() {
+        font-size: 1rem;
+        line-height: 24/16+em;
+    }
+}
