@@ -1,11 +1,11 @@
 +doctype()
     main.mainpage
         .container.mainpage__top
-            .logo.mainpage__logo
+            a(href='https://uralbiblio.ru/', target='_blank').logo.mainpage__logo
                 +imgSrcset('img/logo', 'png')
             p.text-1.mainpage__text-1
                 | Я, Попова Любовь Леонидовна,  библиотекарь в Средней Школе села "Богдановское" Челябинской области.
-            button.btn-1.mainpage__btn подарить книгу
+            button.btn-1.mainpage__btn.js-donate-btn подарить книгу
         .container.mainpage__about.about
             h2.title-2.mainpage__title-2 О нас
             .about__row
@@ -34,7 +34,7 @@
                     | Последние 10 лет школьные библиотеки обеспечиваются из бюджета РФ только учебниками и рабочими тетрадями и единственный способ появления книг в библиотеке это пожертвования.
                 p.text-4.about__text-4
                     | Сейчас детская книга для села жизненно необходима и мы очень нуждаемся в вашей помощи.
-        .container.mainpage__help.help
+        .container.mainpage__help.help.js-donate-section
             h2.title-2.help__title Как нам помочь книгой?
             ul.help__list
                 -
@@ -52,7 +52,7 @@
             h2.title-2.books__title Какие книги нам можно подарить?
             p.text-2.books__text-1
                 |Нашей библиотеке и её читатьелям особо не хватает детских книг для младьшего школьного возраста.  Хорошие детские книги издают следующией издательства:
-            ul.books__list
+            .books__list
                 -
                     var booksList = [
                         'Самокат',
@@ -61,7 +61,7 @@
                         'А+А'
                     ]
                 each item, i in booksList
-                    li.books__item
+                    a(href='#', target='_blank').books__item
                         .books__image
                             +imgSrcset(`img/books-${i+1}`,'png')
                         h4.books__title-2= item

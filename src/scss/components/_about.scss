@@ -69,22 +69,11 @@
         text-align: center;
 
         @include under-sm() {
-            position: relative;
-            min-height: 135/16+rem;
             margin: 20/16+rem 0 40/16+rem;
         }
 
         img {
             max-width: 100%;
-
-            @include under-sm() {
-                position: absolute;
-                top: 0;
-                left: 50%;
-                bottom: 0;
-                max-width: none;
-                max-height: 100%;
-            }
         }
     }
 

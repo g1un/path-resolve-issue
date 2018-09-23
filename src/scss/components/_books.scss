@@ -53,6 +53,8 @@
         border-radius: 11/16+rem;
         background: #fff;
         box-shadow: 0 0 3rem 0 rgba(#000, .16);
+        text-decoration: none;
+        color: $chicago;
 
         @include under-sm() {
             min-width: 0;

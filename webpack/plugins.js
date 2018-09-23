@@ -18,6 +18,10 @@ let plugins = (isProd, src, dist) => {
             {
                 from: SRC_DIR + '/fonts/',
                 to: DIST_DIR + '/fonts/',
+            },
+            {
+                from: SRC_DIR + '/favicon/',
+                to: DIST_DIR,
             }
         ]),
         new ImageminPlugin({
