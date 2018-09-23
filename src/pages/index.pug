@@ -2,7 +2,7 @@
     main.mainpage
         .container.mainpage__top
             .logo.mainpage__logo
-                |#[a(href="uralbiblio.ru") +imgSrcset('img/logo', 'png')]
+                +imgSrcset('img/logo', 'png')
             p.text-1.mainpage__text-1
                 | Я, Попова Любовь Леонидовна,  библиотекарь в Средней Школе села "Богдановское" Челябинской области.
             button.btn-1.mainpage__btn подарить книгу
@@ -51,7 +51,7 @@
         .container.mainpage__books.books
             h2.title-2.books__title Какие книги нам можно подарить?
             p.text-2.books__text-1
-                |Нашей библиотеке и ее читатьелям особо не хватает детских книг для младьшего школьного возраста.  Хорошие детские книги издают следующией издательсва:
+                |Нашей библиотеке и её читатьелям особо не хватает детских книг для младьшего школьного возраста.  Хорошие детские книги издают следующией издательства:
             ul.books__list
                 -
                     var booksList = [
