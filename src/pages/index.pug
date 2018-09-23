@@ -55,16 +55,16 @@
             .books__list
                 -
                     var booksList = [
-                        'Самокат',
-                        'МИФ',
-                        'Розовый жираф',
-                        'A%2bA'
+                        ['Самокат', 'https://www.ozon.ru/?context=search&text=Самокат'],
+                        ['МИФ', 'https://www.ozon.ru/?context=search&text=Самокат'],
+                        ['Розовый жираф', 'https://www.ozon.ru/?context=search&text=Самокат'],
+                        ['A+A', 'https://www.ozon.ru/?context=search&text=A%2bA'],
                     ]
                 each item, i in booksList
-                    a(href='https://www.ozon.ru/?context=search&text=' + item, target='_blank').books__item
+                    a(href=item[1], target='_blank').books__item
                         .books__image
                             +imgSrcset(`img/books-${i+1}`,'png')
-                        h4.books__title-2= item
+                        h4.books__title-2= item[0]
         .container.mainpage__contacts.contacts
             h2.title-2.contacts__title Контакты
             .contacts__row
