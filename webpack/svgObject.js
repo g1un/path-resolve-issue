@@ -2,7 +2,7 @@ var fs = require('fs');
 
 //create svg filename-filecontent object
 module.exports = (svgDirPath) => {
-    let svgFileNamesArr = fs.readdirSync(svgDirPath);
+    let svgFileNamesArr = fs.existsSync(svgDirPath) ? fs.readdirSync(svgDirPath) : [];
     let svgObject = {};
 
     svgFileNamesArr.forEach((fileName, i) => {
