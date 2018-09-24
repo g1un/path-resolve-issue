@@ -55,7 +55,7 @@ let config = (env, argv) => {
                     }
                 },
                 {
-                    test: /\.(scss|css)$/,
+                    test: /\.scss$/,
                     use: [
                         {
                             loader: "file-loader",
@@ -85,6 +85,10 @@ let config = (env, argv) => {
                         },
                         "sass-loader"
                     ]
+                },
+                {
+                    test: /\.css$/,
+                    use: ['style-loader', 'css-loader']
                 },
                 {
                     test: /\.pug$/,
